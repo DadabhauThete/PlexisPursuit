@@ -15,7 +15,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: "/admin/dashboard/submitclaims",
-    title: "Submit Claims",
+    title: "Submitted Claims",
     moduleName: "submitclaims",
     iconType: "material-icons-two-tone",
     icon: "event_note",
@@ -28,7 +28,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: "/admin/dashboard/inprocess",
-    title: "In-Progress",
+    title: "In-Process",
     moduleName: "inprocess",
     iconType: "material-icons-two-tone",
     icon: "event_note",

@@ -13,7 +13,28 @@
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <div class="card">
           <div class="body">
-            <p>inprocess works!</p>
+            <table class="table">
+              <thead class="tableheader">
+                <tr>
+                  <th scope="col">PATIENT NAME</th>
+                  <th scope="col">CLAIM ID</th>
+                  <th scope="col">PROVIDER</th>
+                  <th scope="col">PAYER</th>
+                  <th scope="col">DATE OF SERVICE</th>
+                  <th scope="col">STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let patient of patients">
+                  <td>{{ patient.patient }}</td>
+                  <td>{{ patient.claimID }}</td>
+                  <td>{{ patient.provider }}</td>
+                  <td>{{ patient.payer }}</td>
+                  <td>{{ patient.dateOfService }}</td>
+                  <td>{{ patient.status }}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

@@ -1,0 +1,34 @@
+[
+  {
+    "patient": "Mary B Dough",
+    "claimID": 105011005501,
+    "provider": "Hartford Hospital",
+    "payer": "Aetna",
+    "dateOfService": "3/20/21",
+    "status": "now processing"
+  },
+  {
+    "patient": "Simon Johnson",
+    "claimID": 105012233315,
+    "provider": "Atrium Health Mercy",
+    "payer": "BCBS NC",
+    "dateOfService": "3/24/21",
+    "status": "Not Started"
+  },
+  {
+    "patient": "Martha Dixon",
+    "claimID": 11601222323,
+    "provider": "UPMC Passavant Hospital",
+    "payer": "Highmark BCBS",
+    "dateOfService": "3/22/21",
+    "status": "Not Started"
+  },
+  {
+    "patient": "James B. Frater",
+    "claimID": 111012224616,
+    "provider": "Jackson Memorial hospital",
+    "payer": "Wellcare",
+    "dateOfService": "3/21/21",
+    "status": "Not Started"
+  }
+]
