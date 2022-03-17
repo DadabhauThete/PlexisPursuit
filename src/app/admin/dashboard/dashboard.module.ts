@@ -12,14 +12,24 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 import { NgApexchartsModule } from "ng-apexcharts";
 import { ComponentsModule } from "src/app/shared/components/components.module";
 import { SharedModule } from "src/app/shared/shared.module";
-import { SubmitclaimsComponent } from './submitclaims/submitclaims.component';
-import { InprocessComponent } from './inprocess/inprocess.component';
-import { CompleteComponent } from './complete/complete.component';
-import { StatusworkbasketComponent } from './statusworkbasket/statusworkbasket.component';
-import { ReportComponent } from './report/report.component';
-
+import { SubmitclaimsComponent } from "./submitclaims/submitclaims.component";
+import { InprocessComponent } from "./inprocess/inprocess.component";
+import { CompleteComponent } from "./complete/complete.component";
+import { StatusworkbasketComponent } from "./statusworkbasket/statusworkbasket.component";
+import { ReportComponent } from "./report/report.component";
+import { MatTableModule } from "@angular/material/table";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatExpansionModule } from "@angular/material/expansion";
 @NgModule({
-  declarations: [MainComponent, Dashboard2Component, SubmitclaimsComponent, InprocessComponent, CompleteComponent, StatusworkbasketComponent, ReportComponent],
+  declarations: [
+    MainComponent,
+    Dashboard2Component,
+    SubmitclaimsComponent,
+    InprocessComponent,
+    CompleteComponent,
+    StatusworkbasketComponent,
+    ReportComponent,
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -32,6 +42,9 @@ import { ReportComponent } from './report/report.component';
     MatTooltipModule,
     ComponentsModule,
     SharedModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatExpansionModule,
   ],
 })
 export class DashboardModule {}

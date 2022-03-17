@@ -9,12 +9,305 @@
       ></app-breadcrumb>
     </div>
     <!-- Widgets -->
+
     <div class="row clearfix">
-      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
         <div class="card">
-          <div class="body">
-            <p>complete works!</p>
+          <div class="header">
+            <h2>Filter</h2>
           </div>
+          <div class="body">
+            <form
+              class="register-form"
+              [formGroup]="sortClaims"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field
+                    class="example-full-width"
+                    appearance="outline"
+                  >
+                    <mat-label>Date Range</mat-label>
+                    <mat-date-range-input
+                      [formGroup]="campaignOne"
+                      [rangePicker]="campaignOnePicker"
+                      [comparisonStart]="campaignOne.value.start"
+                      [comparisonEnd]="campaignOne.value.end"
+                    >
+                      <input
+                        matStartDate
+                        placeholder="Start date"
+                        formControlName="startData"
+                        required
+                      />
+                      <input
+                        matEndDate
+                        placeholder="End date"
+                        formControlName="endDate"
+                        required
+                      />
+                    </mat-date-range-input>
+
+                    <mat-datepicker-toggle
+                      matSuffix
+                      [for]="campaignOnePicker"
+                    ></mat-datepicker-toggle>
+                    <mat-date-range-picker
+                      #campaignOnePicker
+                    ></mat-date-range-picker>
+                    <mat-error
+                      *ngIf="
+                        sortClaims.get('startDate').hasError('required') ||
+                        sortClaims.get('endDate').hasError('required') ||
+                        sortClaims.get('startDate').touched
+                      "
+                    >
+                      Please select date
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field
+                    class="example-full-width"
+                    appearance="outline"
+                  >
+                    <mat-label>Patient Name</mat-label>
+                    <input matInput formControlName="patientName" required />
+                    <mat-error
+                      *ngIf="
+                        sortClaims.get('patientName').hasError('required') ||
+                        sortClaims.get('patientName').touched
+                      "
+                    >
+                      Please enter a valid patient name
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field
+                    class="example-full-width"
+                    appearance="outline"
+                  >
+                    <mat-label>Claim Id</mat-label>
+                    <input matInput formControlName="claimId" required />
+                    <mat-error
+                      *ngIf="
+                        sortClaims.get('claimId').hasError('required') ||
+                        sortClaims.get('claimId').touched
+                      "
+                    >
+                      Please enter a claim id
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                  <button class="btn-space" mat-raised-button color="primary">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="card">
+          <a href="">
+            <div class="body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h4 class="usernameclss">Mary B. Dough</h4>
+                </div>
+                <div class="col align-right">
+                  <p class="complete-status infoclss">Paid</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Claim ID: 105011005501</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Provider: Hartford Hospital</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Date of Service: 3/20/21</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Payer: Aetna</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Subscriber: John Dough</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">
+                    Total charge: <span class="greenclss">$2,100.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h4 class="usernameclss">Mary B. Dough</h4>
+                </div>
+                <div class="col align-right">
+                  <p class="complete-status infoclss">Paid</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Claim ID: 105011005501</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Provider: Hartford Hospital</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Date of Service: 3/20/21</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Payer: Aetna</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Subscriber: John Dough</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">
+                    Total charge: <span class="greenclss">$2,100.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h4 class="usernameclss">Mary B. Dough</h4>
+                </div>
+                <div class="col align-right">
+                  <p class="complete-status infoclss">Paid</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Claim ID: 105011005501</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Provider: Hartford Hospital</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Date of Service: 3/20/21</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Payer: Aetna</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Subscriber: John Dough</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">
+                    Total charge: <span class="greenclss">$2,100.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h4 class="usernameclss">Mary B. Dough</h4>
+                </div>
+                <div class="col align-right">
+                  <p class="complete-status infoclss">Paid</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Claim ID: 105011005501</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Provider: Hartford Hospital</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Date of Service: 3/20/21</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Payer: Aetna</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Subscriber: John Dough</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">
+                    Total charge: <span class="greenclss">$2,100.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h4 class="usernameclss">Mary B. Dough</h4>
+                </div>
+                <div class="col align-right">
+                  <p class="complete-status infoclss">Paid</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Claim ID: 105011005501</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Provider: Hartford Hospital</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Date of Service: 3/20/21</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <p class="infoclss">Payer: Aetna</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">Subscriber: John Dough</p>
+                </div>
+                <div class="col">
+                  <p class="infoclss">
+                    Total charge: <span class="greenclss">$2,100.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
