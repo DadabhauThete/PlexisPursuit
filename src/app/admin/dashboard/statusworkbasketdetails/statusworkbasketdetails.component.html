@@ -1,0 +1,105 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb
+        [title]="'Status Workbasket Details'"
+        [items]="[]"
+        [active_item]="'Dashboard'"
+      ></app-breadcrumb>
+    </div>
+    <!-- Widgets -->
+    <div class="row py-2">
+      <div class="col-xl-4 order-xl-2">
+        <div class="card card-stats shadow">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="usernameclss">Susane C. Jones</h6>
+              </div>
+              <div class="col align-right">
+                <p class="complete-status infoclss" style="color: green">
+                  Submitted
+                </p>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p>837 Claims</p>
+              </div>
+            </div>
+            <div class="col">
+              <p class="infoclss">Claim ID: 1032043057</p>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p class="infoclss">Date of Service: 3/08/21</p>
+              </div>
+              <div class="col align-right">
+                <p class="infoclss"><span class="greenclss">$245.00</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 order-xl-2">
+        <div class="card card-stats shadow">
+          <div>
+            <ul class="list-group">
+              <li
+                class="text-muted h5 list-group-item d-flex border-0 justify-content-between align-items-center"
+              >
+                Provider Adjustment
+                <span>-$245.00</span>
+              </li>
+              <li
+                class="text-muted h5 list-group-item d-flex border-0 justify-content-between align-items-center"
+              >
+                Patient Responsibility
+                <span> -$204.57</span>
+              </li>
+              <li
+                class="h5 list-group-item d-flex border-top-1 justify-content-between align-items-center"
+              >
+                Total Adustment
+                <span>-$449.57</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 order-xl-2">
+        <div class="card card-stats shadow">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="usernameclss">Susane C. Jones</h6>
+              </div>
+              <div class="col align-right">
+                <p class="complete-status infoclss" style="color: red">
+                  Overpaid
+                </p>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p>835 ERA</p>
+              </div>
+            </div>
+            <div class="col">
+              <p class="infoclss">Claim ID: 1032043057</p>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p class="infoclss">Date of Service: 3/08/21</p>
+              </div>
+              <div class="col align-right">
+                <p class="infoclss"><span class="greenclss">$204.57</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
