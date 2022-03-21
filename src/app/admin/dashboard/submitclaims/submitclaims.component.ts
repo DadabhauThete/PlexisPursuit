@@ -5,6 +5,7 @@ import {
   Validators,
   FormControl,
 } from "@angular/forms";
+import submittedclaimsData from "../../../../assets/data/submittedclaimsdata.json";
 
 @Component({
   selector: "app-submitclaims",
@@ -12,6 +13,7 @@ import {
   styleUrls: ["./submitclaims.component.sass"],
 })
 export class SubmitclaimsComponent implements OnInit {
+  submitclaimsdata = submittedclaimsData;
   panelOpenState = false;
   sortClaims: FormGroup;
   campaignOne: FormGroup;

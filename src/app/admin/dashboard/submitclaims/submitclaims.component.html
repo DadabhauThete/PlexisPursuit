@@ -127,19 +127,28 @@
           </div>
           <div class="body">
             <ul class="list-group list-group-flush list">
-              <li class="list-group-item px-0 ng-star-inserted">
+              <li
+                *ngFor="let submitclaimsdata of submitclaimsdata"
+                class="list-group-item px-0 ng-star-inserted"
+              >
                 <div class="row">
                   <div class="col-auto">
                     <mat-checkbox class="example-margin"></mat-checkbox>
                   </div>
                   <div class="col">
-                    <p class="infoclss">Claim ID: 105011005501</p>
+                    <p class="infoclss">
+                      Claim ID: {{ submitclaimsdata.ClaimID }}
+                    </p>
                   </div>
                   <div class="col">
-                    <p class="infoclss">Provider: Hartford Hospital</p>
+                    <p class="infoclss">
+                      Provider: {{ submitclaimsdata.Provider }}
+                    </p>
                   </div>
                   <div class="col">
-                    <p class="infoclss">Date of Service: 3/20/21</p>
+                    <p class="infoclss">
+                      Date of Service: {{ submitclaimsdata.DateOfService }}
+                    </p>
                   </div>
                   <div class="col-auto">
                     <p style="visibility: hidden">
@@ -154,27 +163,40 @@
                     </p>
                   </div>
                   <div class="col">
-                    <p class="infoclss">Payer: Aetna</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Patient: Mary B. Dough</p>
+                    <p class="infoclss">Payer: {{ submitclaimsdata.Payer }}</p>
                   </div>
                   <div class="col">
                     <p class="infoclss">
-                      Total charge:<span class="greenclss"> $2,000.00</span>
+                      Patient: {{ submitclaimsdata.Patient }}
+                    </p>
+                  </div>
+                  <div class="col">
+                    <p class="infoclss">
+                      Total charge:<span class="greenclss">
+                        ${{ submitclaimsdata.TotalCharge }}</span
+                      >
                     </p>
                   </div>
                   <div class="col-auto">
                     <p
                       class="infoclss curserclss"
-                      (click)="showMyContainer = !showMyContainer"
+                      (click)="
+                        submitclaimsdata.showMyContainer =
+                          !submitclaimsdata.showMyContainer
+                      "
                     >
-                      <i class="fas fa-minus" *ngIf="showMyContainer"></i>
-                      <i class="fas fa-plus" *ngIf="!showMyContainer"></i>
+                      <i
+                        class="fas fa-minus"
+                        *ngIf="submitclaimsdata.showMyContainer"
+                      ></i>
+                      <i
+                        class="fas fa-plus"
+                        *ngIf="!submitclaimsdata.showMyContainer"
+                      ></i>
                     </p>
                   </div>
                 </div>
-                <div *ngIf="showMyContainer" class="row">
+                <div *ngIf="submitclaimsdata.showMyContainer" class="row">
                   <div class="col-xl-12">
                     <div class="card border-radius">
                       <div class="header">
@@ -186,169 +208,20 @@
                         </div>
                       </div>
                       <div class="body">
-                        <div class="row form-group">
-                          <div class="col-md-3">Service Line1</div>
-                          <div class="col-md-3">HC 92521</div>
-                          <div class="col-md-3">123.44</div>
-                          <div class="col-md-3">3/24/21</div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-md-3">Service Line1</div>
-                          <div class="col-md-3">HC 92521</div>
-                          <div class="col-md-3">123.44</div>
-                          <div class="col-md-3">3/24/21</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item px-0 ng-star-inserted">
-                <div class="row">
-                  <div class="col-auto">
-                    <mat-checkbox class="example-margin"></mat-checkbox>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Claim ID: 105011005501</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Provider: Hartford Hospital</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Date of Service: 3/20/21</p>
-                  </div>
-                  <div class="col-auto">
-                    <p style="visibility: hidden">
-                      <i class="fas fa-plus"></i>
-                    </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-auto">
-                    <p style="visibility: hidden">
-                      <mat-checkbox class="example-margin"></mat-checkbox>
-                    </p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Payer: Aetna</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Patient: Mary B. Dough</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">
-                      Total charge:<span class="greenclss"> $2,000.00</span>
-                    </p>
-                  </div>
-                  <div class="col-auto">
-                    <p
-                      class="infoclss curserclss"
-                      (click)="showMyContainer = !showMyContainer"
-                    >
-                      <i class="fas fa-minus" *ngIf="showMyContainer"></i>
-                      <i class="fas fa-plus" *ngIf="!showMyContainer"></i>
-                    </p>
-                  </div>
-                </div>
-                <div *ngIf="showMyContainer" class="row">
-                  <div class="col-xl-12">
-                    <div class="card border-radius">
-                      <div class="header">
-                        <div class="row form-group">
-                          <div class="col-md-3"></div>
-                          <div class="col-md-3">SV101</div>
-                          <div class="col-md-3">SV102</div>
-                          <div class="col-md-3">Date</div>
-                        </div>
-                      </div>
-                      <div class="body">
-                        <div class="row form-group">
-                          <div class="col-md-3">Service Line1</div>
-                          <div class="col-md-3">HC 92521</div>
-                          <div class="col-md-3">123.44</div>
-                          <div class="col-md-3">3/24/21</div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-md-3">Service Line1</div>
-                          <div class="col-md-3">HC 92521</div>
-                          <div class="col-md-3">123.44</div>
-                          <div class="col-md-3">3/24/21</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item px-0 ng-star-inserted">
-                <div class="row">
-                  <div class="col-auto">
-                    <mat-checkbox class="example-margin"></mat-checkbox>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Claim ID: 105011005501</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Provider: Hartford Hospital</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Date of Service: 3/20/21</p>
-                  </div>
-                  <div class="col-auto">
-                    <p style="visibility: hidden">
-                      <i class="fas fa-plus"></i>
-                    </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-auto">
-                    <p style="visibility: hidden">
-                      <mat-checkbox class="example-margin"></mat-checkbox>
-                    </p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Payer: Aetna</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">Patient: Mary B. Dough</p>
-                  </div>
-                  <div class="col">
-                    <p class="infoclss">
-                      Total charge:<span class="greenclss"> $2,000.00</span>
-                    </p>
-                  </div>
-                  <div class="col-auto">
-                    <p
-                      class="infoclss curserclss"
-                      (click)="showMyContainer = !showMyContainer"
-                    >
-                      <i class="fas fa-minus" *ngIf="showMyContainer"></i>
-                      <i class="fas fa-plus" *ngIf="!showMyContainer"></i>
-                    </p>
-                  </div>
-                </div>
-                <div *ngIf="showMyContainer" class="row">
-                  <div class="col-xl-12">
-                    <div class="card border-radius">
-                      <div class="header">
-                        <div class="row form-group">
-                          <div class="col-md-3"></div>
-                          <div class="col-md-3">SV101</div>
-                          <div class="col-md-3">SV102</div>
-                          <div class="col-md-3">Date</div>
-                        </div>
-                      </div>
-                      <div class="body">
-                        <div class="row form-group">
-                          <div class="col-md-3">Service Line1</div>
-                          <div class="col-md-3">HC 92521</div>
-                          <div class="col-md-3">123.44</div>
-                          <div class="col-md-3">3/24/21</div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-md-3">Service Line1</div>
-                          <div class="col-md-3">HC 92521</div>
-                          <div class="col-md-3">123.44</div>
-                          <div class="col-md-3">3/24/21</div>
+                        <div
+                          class="row form-group"
+                          *ngFor="let service of submitclaimsdata.Service"
+                        >
+                          <div class="col-md-3">
+                            {{ service.serviceline }}
+                          </div>
+                          <div class="col-md-3">
+                            {{ service.SV101 }}
+                          </div>
+                          <div class="col-md-3">{{ service.SV102 }}</div>
+                          <div class="col-md-3">
+                            {{ service.Date }}
+                          </div>
                         </div>
                       </div>
                     </div>
