@@ -6,15 +6,16 @@
     "Payer": "Aetna",
     "Patient": "Mary B. Dough",
     "TotalCharge": 2000.0,
+    "showMyContainer": false,
     "Service": [
       {
-        "serviceline1": "serviceline1",
+        "serviceline": "Serviceline 1",
         "SV101": "HC 59430",
         "SV102": "1200.00",
         "Date": "3/20/21"
       },
       {
-        "serviceline2": "serviceline2",
+        "serviceline": "Serviceline 2",
         "SV101": "HC 59440",
         "SV102": "800.00",
         "Date": "3/20/21"
@@ -28,15 +29,16 @@
     "Payer": "BCBS NC",
     "Patient": "Simon Johnson",
     "TotalCharge": 388.68,
+    "showMyContainer": false,
     "Service": [
       {
-        "serviceline1": "serviceline1",
+        "serviceline": "Serviceline 1",
         "SV101": "HC 92521",
         "SV102": "123.44",
         "Date": "3/24/21"
       },
       {
-        "serviceline2": "serviceline2",
+        "serviceline": "Serviceline 2",
         "SV101": "HC 92508",
         "SV102": "265.24",
         "Date": "3/24/21"
@@ -50,15 +52,16 @@
     "Payer": "Highmark BCBS",
     "Patient": "Martha Dixon",
     "TotalCharge": 688.68,
+    "showMyContainer": false,
     "Service": [
       {
-        "serviceline1": "serviceline1",
+        "serviceline": "Serviceline 1",
         "SV101": "HC 78265",
         "SV102": "226.64",
         "Date": "3/22/21"
       },
       {
-        "serviceline2": "serviceline2",
+        "serviceline": "Serviceline 2",
         "SV101": "HC 78201",
         "SV102": "462.04",
         "Date": "3/22/21"
@@ -72,15 +75,16 @@
     "Payer": "Wellcare",
     "Patient": "James B. Frater",
     "TotalCharge": 584.92,
+    "showMyContainer": false,
     "Service": [
       {
-        "serviceline1": "serviceline1",
+        "serviceline": "Serviceline 1",
         "SV101": "HC 78265",
         "SV102": "226.64",
         "Date": "3/21/21"
       },
       {
-        "serviceline2": "serviceline2",
+        "serviceline": "Serviceline 2",
         "SV101": "HC 78201",
         "SV102": "358.28",
         "Date": "3/21/21"
