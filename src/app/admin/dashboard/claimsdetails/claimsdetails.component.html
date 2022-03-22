@@ -1,4 +1,4 @@
-<section class="content">
+<section class="content claimsdetails">
   <div class="content-block">
     <div class="block-header">
       <!-- breadcrumb -->
@@ -38,7 +38,7 @@
               </div>
               <div class="col-6">
                 <p class="infoclss align-right">
-                  Total charge: <span class="greenclss">$2,100.00</span>
+                  <span class="greenclss">$ 2,100.00</span>
                 </p>
               </div>
             </div>
@@ -48,42 +48,26 @@
 
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <div class="card">
-          <a href="">
-            <div class="body">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h4 class="usernameclss">Mary B. Dough</h4>
-                </div>
-                <div class="col align-right">
-                  <p class="complete-status infoclss">Paid</p>
-                </div>
-              </div>
-              <div class="row align-items-center">
-                <div class="col">
-                  <p class="infoclss">Claim ID: 105011005501</p>
-                </div>
-                <div class="col">
-                  <p class="infoclss">Provider: Hartford Hospital</p>
-                </div>
-                <div class="col">
-                  <p class="infoclss">Date of Service: 3/20/21</p>
-                </div>
-              </div>
-              <div class="row align-items-center">
-                <div class="col">
-                  <p class="infoclss">Payer: Aetna</p>
-                </div>
-                <div class="col">
-                  <p class="infoclss">Subscriber: John Dough</p>
-                </div>
-                <div class="col">
-                  <p class="infoclss">
-                    Total charge: <span class="greenclss">$2,100.00</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
+          <div class="body">
+            <ul class="list-group">
+              <li
+                class="list-group-item d-flex border-0 justify-content-between align-items-center"
+              >
+                Provider Adjustment <span>$34.60</span>
+              </li>
+              <li
+                class="list-group-item d-flex border-0 justify-content-between align-items-center"
+              >
+                Patient Responsibility
+                <span>$142.54</span>
+              </li>
+              <li
+                class="list-group-item d-flex border justify-content-between align-items-center"
+              >
+                Total Adustment <span> $177.14</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -113,7 +97,7 @@
               </div>
               <div class="col-6">
                 <p class="infoclss align-right">
-                  Total charge: <span class="greenclss">$1922.86</span>
+                  <span class="greenclss">$1922.86</span>
                 </p>
               </div>
             </div>
@@ -128,7 +112,7 @@
             <h2>Service Line</h2>
           </div>
           <div class="body table-responsive">
-            <div>
+            <div class="service-name">
               <h5>Service Line 1</h5>
             </div>
             <table class="table">
@@ -189,7 +173,7 @@
                 </tr>
               </tbody>
             </table>
-            <div>
+            <div class="service-name">
               <h5>Service Line 2</h5>
             </div>
             <table class="table">
@@ -250,6 +234,12 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="footer">
+            <div class="example-button-row align-right">
+              <button mat-raised-button>Approve</button>
+              <button mat-raised-button color="primary">Tag For Review</button>
+            </div>
           </div>
         </div>
       </div>
