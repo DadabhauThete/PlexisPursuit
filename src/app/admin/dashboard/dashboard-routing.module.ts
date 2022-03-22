@@ -9,6 +9,7 @@ import { CompleteComponent } from "./complete/complete.component";
 import { StatusworkbasketComponent } from "./statusworkbasket/statusworkbasket.component";
 import { ReportComponent } from "./report/report.component";
 import { ClaimsdetailsComponent } from "./claimsdetails/claimsdetails.component";
+import { StatusworkbasketdetailsComponent } from "./statusworkbasketdetails/statusworkbasketdetails.component";
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: "statusworkbasket",
     component: StatusworkbasketComponent,
+  },
+  {
+    path: "statusworkbasketdetails",
+    component: StatusworkbasketdetailsComponent,
   },
   {
     path: "report",
