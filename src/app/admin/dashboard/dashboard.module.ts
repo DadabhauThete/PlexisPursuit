@@ -22,6 +22,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { ClaimsdetailsComponent } from "./claimsdetails/claimsdetails.component";
 import { StatusworkbasketdetailsComponent } from "./statusworkbasketdetails/statusworkbasketdetails.component";
+
 @NgModule({
   declarations: [
     MainComponent,
