@@ -17,6 +17,10 @@ interface Patients {
 export class InprocessComponent implements OnInit {
   patients: Patients[] = inprocessData;
   constructor() {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.noOfRows();
+  }
+  noOfRows() {
+    console.log(this.patients.length);
+  }
 }
