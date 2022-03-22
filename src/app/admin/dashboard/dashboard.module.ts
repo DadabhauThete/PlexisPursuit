@@ -20,6 +20,7 @@ import { ReportComponent } from "./report/report.component";
 import { MatTableModule } from "@angular/material/table";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatExpansionModule } from "@angular/material/expansion";
+import { ClaimsdetailsComponent } from './claimsdetails/claimsdetails.component';
 @NgModule({
   declarations: [
     MainComponent,
@@ -29,6 +30,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
     CompleteComponent,
     StatusworkbasketComponent,
     ReportComponent,
+    ClaimsdetailsComponent,
   ],
   imports: [
     CommonModule,

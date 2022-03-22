@@ -8,6 +8,8 @@ import { InprocessComponent } from "./inprocess/inprocess.component";
 import { CompleteComponent } from "./complete/complete.component";
 import { StatusworkbasketComponent } from "./statusworkbasket/statusworkbasket.component";
 import { ReportComponent } from "./report/report.component";
+import { ClaimsdetailsComponent } from "./claimsdetails/claimsdetails.component";
+
 const routes: Routes = [
   {
     path: "",
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path: "report",
     component: ReportComponent,
+  },
+  {
+    path: "claimsdetails",
+    component: ClaimsdetailsComponent,
+  },
+  {
+    path: "claimsdetails/:id",
+    component: ClaimsdetailsComponent,
   },
   {
     path: "dashboard2",
