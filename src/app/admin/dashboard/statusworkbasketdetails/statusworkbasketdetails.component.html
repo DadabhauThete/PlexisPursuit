@@ -1,0 +1,295 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+  />
+</head>
+<section class="content">
+  <div class="content-block">
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb
+        [title]="'Status Workbasket Details'"
+        [items]="[]"
+        [active_item]="'Dashboard'"
+      ></app-breadcrumb>
+    </div>
+    <!-- Widgets -->
+    <div class="row py-2">
+      <div class="col-xl-4 order-xl-2">
+        <div class="card card-stats shadow">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="usernameclss">Susane C. Jones</h6>
+              </div>
+              <div class="col align-right">
+                <p class="complete-status infoclss" style="color: green">
+                  Submitted
+                </p>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p>837 Claims</p>
+              </div>
+            </div>
+            <div class="col">
+              <p class="infoclss">Claim ID: 1032043057</p>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p class="infoclss">Date of Service: 3/08/21</p>
+              </div>
+              <div class="col align-right">
+                <p class="infoclss"><span class="greenclss">$245.00</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 order-xl-2">
+        <div class="card card-stats shadow">
+          <div class="card-body" style="height: 189px">
+            <ul class="list-group">
+              <li
+                class="text-muted h5 list-group-item d-flex border-0 justify-content-between align-items-center"
+              >
+                Provider Adjustment
+                <span>-$245.00</span>
+              </li>
+              <li
+                class="text-muted h5 list-group-item d-flex border-0 justify-content-between align-items-center"
+              >
+                Patient Responsibility
+                <span> -$204.57</span>
+              </li>
+              <li
+                class="h5 list-group-item d-flex border-top-1 justify-content-between align-items-center"
+              >
+                Total Adustment
+                <span>-$449.57</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 order-xl-2">
+        <div class="card card-stats shadow">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="usernameclss">Susane C. Jones</h6>
+              </div>
+              <div class="col align-right">
+                <p class="complete-status infoclss" style="color: red">
+                  Overpaid
+                </p>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p>835 ERA</p>
+              </div>
+            </div>
+            <div class="col">
+              <p class="infoclss">Claim ID: 1032043057</p>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <p class="infoclss">Date of Service: 3/08/21</p>
+              </div>
+              <div class="col align-right">
+                <p class="infoclss"><span class="greenclss">$204.57</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row mt-1">
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="h4 mb-0 text-blue">Service Line</h5>
+            </div>
+            <div class="card-body">
+              <div class="text-primary">
+                <h5>Service line 1</h5>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>837 DATA</th>
+                    <th>SV101</th>
+                    <th>SV102</th>
+                    <th>DATE</th>
+                    <th>BILLING PROVIDER</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>HC99391</td>
+                    <td>$245.00</td>
+                    <td>03/08/2021</td>
+                    <td>Deborah Callahan</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>835 Data</td>
+                    <td>SVC01</td>
+                    <td>SVC02</td>
+                    <td>SVC03</td>
+                    <td>CAS1</td>
+                    <td>CAS2</td>
+                    <td>CAS3</td>
+                    <td>
+                      <span
+                        ngbTooltip="Remittance Advice Remark Codes"
+                        placement="right"
+                        >RARC</span
+                      >
+                    </td>
+                    <td>DTM02</td>
+                    <td>Billing Provider</td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>HC99391</td>
+                    <td>$245.00</td>
+                    <td>$204.57</td>
+                    <td>
+                      CO
+                      <button
+                        class="tool btn-sm btn btn-link p-0"
+                        ngbTooltip="Contractual Obligation"
+                      >
+                        <i class="fa fa-info-circle text-primary fa-sm"> </i>
+                      </button>
+                    </td>
+                    <td>45</td>
+                    <td>$40.43</td>
+                    <td></td>
+                    <td>03/08/2021</td>
+                    <td>Deborah Callahan</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div>
+                <hr class="mt-3 mb-3 border-primary" />
+                <div>
+                  <h5 class="text-danger">Overpayment intimation Received</h5>
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>835 Data</th>
+                      <th>SVC01</th>
+                      <th>SVC02</th>
+                      <th>SVC03</th>
+                      <th>CAS1</th>
+                      <th>CAS2</th>
+                      <th>CAS3</th>
+                      <th>
+                        <span
+                          aria-label="Remittance Advice Remark Codes"
+                          class="cus-tooltip"
+                          >RARC</span
+                        >
+                      </th>
+                      <th>DTM02</th>
+                      <th>Billing Provider</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>HC99391</td>
+                      <td>-$245.00</td>
+                      <td>-$204.57</td>
+                      <td>
+                        CO
+                        <button
+                          class="tool btn-sm btn btn-link p-0"
+                          ngbTooltip="Contractual Obligation"
+                        >
+                          <i class="fa fa-info-circle text-primary fa-sm"> </i>
+                        </button>
+                      </td>
+                      <td>45</td>
+                      <td>-$40.43</td>
+                      <td></td>
+                      <td>03/08/2021</td>
+                      <td>Deborah Callahan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>HC99391</td>
+                      <td>$245.00</td>
+                      <td>$0.00</td>
+                      <td>
+                        PR
+                        <button
+                          class="tool btn-sm btn btn-link p-0"
+                          ngbTooltip="Patient Responsibility"
+                        >
+                          <i class="fa fa-info-circle text-primary fa-sm"> </i>
+                        </button>
+                      </td>
+                      <td>32</td>
+                      <td>$245.00</td>
+                      <td></td>
+                      <td>03/08/2021</td>
+                      <td>Deborah Callahan</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td>PLB03-01</td>
+                      <td>PLB03-01</td>
+                      <td>DCN</td>
+                      <td>Claim Date</td>
+                      <td>Patient A/C #</td>
+                      <td>Adjusted Amt</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>WO</td>
+                      <td>7818606644</td>
+                      <td>03/08/2021</td>
+                      <td>400575</td>
+                      <td>-$204.57</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
